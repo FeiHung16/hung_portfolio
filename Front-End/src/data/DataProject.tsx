@@ -1,11 +1,12 @@
 import ridingCities from "./../assets/img/Riding_cities.webp";
-import booki from "./../assets/img/booki.webp";
-import ohMyFood from "./../assets/img/ohMyFood.webp";
-import printIt from "./../assets/img/print_it.webp";
-import kasa from "./../assets/img/kasa.webp";
+import booki from "./../assets/img/Booki.webp";
+import ohMyFood from "./../assets/img/OhMyFood.webp";
+import printIt from "./../assets/img/Print_It.webp";
+import kasa from "./../assets/img/Kasa.webp";
 import events724 from "./../assets/img/724events.webp";
-import nina from "./../assets/img/nina.webp";
+import nina from "./../assets/img/Nina.webp";
 import argentBank from "./../assets/img/ArgentBank.webp";
+import sophieBluel from "./../assets/img/Sophie_Bluel.webp";
 
 export interface Project {
   id: number;
@@ -87,5 +88,13 @@ export const projects: Project[] = [
       "Ce projet m’a permis de développer une application web sécurisée pour une banque en ligne en utilisant React et Redux. J’ai implémenté des fonctionnalités d’authentification, de gestion de profil utilisateur et de consultation de comptes bancaires en communiquant avec une API REST. J’ai également veillé à la sécurité des données et à la gestion des erreurs pour offrir une expérience utilisateur fiable. Ce projet m’a aidé à approfondir mes compétences en React, Redux, TypeScript et en développement d’applications web sécurisées.",
     technologies: ["React", "Redux", "TypeScript", "API REST", "JWT"],
     cover: argentBank
+  },
+    {
+    id: 9,
+    title: "Sophie Bluel Portfolio",
+    description:
+      "Ce projet m’a permis de développer une application web sécurisée pour une banque en ligne en utilisant React et Redux. J’ai implémenté des fonctionnalités d’authentification, de gestion de profil utilisateur et de consultation de comptes bancaires en communiquant avec une API REST. J’ai également veillé à la sécurité des données et à la gestion des erreurs pour offrir une expérience utilisateur fiable. Ce projet m’a aidé à approfondir mes compétences en React, Redux, TypeScript et en développement d’applications web sécurisées.",
+    technologies: ["React", "Redux", "TypeScript", "API REST", "JWT"],
+    cover: sophieBluel
   }
 ];
