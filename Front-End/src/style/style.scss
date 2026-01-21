@@ -1,0 +1,13 @@
+
+@use "bootstrap" with (
+  $primary: #0A1828,
+  $secondary: #178582,
+
+  $theme-colors: (
+    "primary": #0A1828,
+    "secondary": #178582,
+    "darktean": #0A1828,
+    "softlinen": #F4F1DE,
+    "btnColor":#EEEEEE,
+  )
+);

@@ -1,0 +1,58 @@
+.contact {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+
+    .widthContactInfo {
+        width: 50%;
+    }
+
+    .messageBox {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .customMessageArea {
+            display: flex;
+            width: 60%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: Arial, sans-serif;
+            resize: vertical;
+        }
+    }
+
+}
+
+
+
+
+@media (max-width: 768px) {
+  .contact {
+    left: 0;
+    width: 100%;
+    padding: 12px;
+
+    .widthContactInfo {
+      width: 50%;
+    }
+
+    .messageBox {
+      width: 100%;
+
+      .customMessageArea {
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+  }
+}

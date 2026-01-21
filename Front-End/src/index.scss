@@ -1,0 +1,45 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+:root {
+     --sidebar-width: 40px;
+}
+
+
+main {
+--bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.bg-image {
+   position: fixed;          /* ou absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;              /* derrière tout le contenu */
+    pointer-events: none;  
+}
+
+.text-customs {
+        text-align: center;
+        line-height: 1.1;
+        font-size: 1.5rem;
+
+    }

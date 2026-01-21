@@ -1,0 +1,1 @@
+To launch Backend server: npx ts-node server/server.ts

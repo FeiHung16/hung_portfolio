@@ -1,0 +1,48 @@
+.carroussel {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+.imgWrapper {
+  width: 100%;
+  height: 420px;              // ← hauteur unique pour TOUTES
+  overflow: hidden;           // ← empêche les débordements
+  position: relative;
+  border-radius: 20px;
+
+ img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          // ← remplit le cadre sans déformer
+  object-position: center;    // ← centrage cohérent
+  display: block;
+}
+
+}
+
+.content {
+  padding: 1rem 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 30%;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 2;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.carousel-btn.right {
+      left: 95%;
+    }
