@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { projects } from "../../data/DataProject";
 import { ButtonsCarroussel } from "../utils/buttons/ButtonsCarroussel";
-import "./carroussel.scss";
+import "./Carroussel.scss";
 
 
 export const Carroussel: React.FC = () => {
