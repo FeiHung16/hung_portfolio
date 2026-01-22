@@ -15,9 +15,12 @@ export default async function handler(
     return res.status(400).json({ message: "Champs manquants" });
   }
 
+  if (!process.env.MAIL_USER || !process.env.MAIL_PASS) {
+    console.error("MAIL_USER ou MAIL_PASS manquant !");
+    return res.status(500).json({ message: "Configuration email manquante" });
+  }
+
   try {
-    console.log("MAIL_USER:", process.env.MAIL_USER ? "OK" : "MISSING");
-console.log("MAIL_PASS:", process.env.MAIL_PASS ? "OK" : "MISSING");
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -28,21 +31,17 @@ console.log("MAIL_PASS:", process.env.MAIL_PASS ? "OK" : "MISSING");
 
     await transporter.sendMail({
       from: process.env.MAIL_USER,
-      replyTo: email,
       to: process.env.MAIL_USER,
+      replyTo: email,
       subject: "Nouveau message depuis le portfolio",
       text: `Nom: ${name}\nEmail: ${email}\nMessage:\n${message}`,
     });
 
     return res.status(200).json({ success: true });
   } catch (error: unknown) {
-  let message = "Erreur inconnue";
-
-  if (error instanceof Error) {
-    message = error.message;
+    let message = "Erreur inconnue";
+    if (error instanceof Error) message = error.message;
+    console.error("Erreur Nodemailer:", message);
+    return res.status(500).json({ message: "Erreur lors de l'envoi", error: message });
   }
-
-  console.error("Erreur Nodemailer:", message);
-  return res.status(500).json({ message: "Erreur lors de l'envoi", error: message });
-}
 }

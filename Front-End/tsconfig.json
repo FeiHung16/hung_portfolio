@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",             // Version de JS à générer
+    "module": "CommonJS",           // IMPORTANT pour Vercel serverless
+    "outDir": "dist",               // Dossier de sortie si tu veux compiler séparément
+    "rootDir": ".",                 // Racine des fichiers source
+    "strict": true,                 // Active toutes les vérifications strictes
+    "esModuleInterop": true,        // Permet d'utiliser import de modules CJS
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["api/**/*.ts", "src/**/*.ts"],  // Tes fichiers à compiler
+  "exclude": ["node_modules", "dist"]
+}
