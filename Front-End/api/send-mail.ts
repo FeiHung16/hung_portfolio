@@ -34,7 +34,7 @@ export default async function handler(
 
     return res.status(200).json({ success: true });
   } catch (error) {
-    console.error(error);
+    console.error("Erreur Nodemailer:", error);
     return res.status(500).json({ message: "Erreur lors de l'envoi" });
   }
 }
