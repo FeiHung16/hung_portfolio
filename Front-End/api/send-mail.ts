@@ -16,6 +16,8 @@ export default async function handler(
   }
 
   try {
+    console.log("MAIL_USER:", process.env.MAIL_USER ? "OK" : "MISSING");
+console.log("MAIL_PASS:", process.env.MAIL_PASS ? "OK" : "MISSING");
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -33,8 +35,14 @@ export default async function handler(
     });
 
     return res.status(200).json({ success: true });
-  } catch (error) {
-    console.error("Erreur Nodemailer:", error);
-    return res.status(500).json({ message: "Erreur lors de l'envoi" });
+  } catch (error: unknown) {
+  let message = "Erreur inconnue";
+
+  if (error instanceof Error) {
+    message = error.message;
   }
+
+  console.error("Erreur Nodemailer:", message);
+  return res.status(500).json({ message: "Erreur lors de l'envoi", error: message });
+}
 }
