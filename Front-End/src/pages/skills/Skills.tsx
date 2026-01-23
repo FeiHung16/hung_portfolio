@@ -51,7 +51,7 @@ export const Skills: React.FC = () => {
                     </div>
                     <div className='downloadContainer'>
                         <button type='button' className='btn btn-btnColor m-0-auto'
-                            onClick={() => window.open('../../../public/document/CV Hung (P)v3.pdf')}>
+                            onClick={() => window.open('/document/Cv.pdf', '_blank')}>
                             Télécharger mon CV
                         </button>
                     </div>

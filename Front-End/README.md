@@ -1,3 +1,25 @@
+This project is a portfolio using React + Vite and deploy with Vercel.Moreover including a form that allow to send a message via mail with NodeMailer.
+
+The architecture is outlining with front-end build and its serverless.
+
+Technical choices :
+Front-End:
+-React + Vite
+-Scss 
+-TypeScript
+-BootStrap
+
+BackEnd:
+-Vercel Serverless Functions
+-Node.Js (Vercel)
+-NodeMailer
+
+MAIL_USER & MAIL_PASS that allow the option to send me a mail from the form are stored on Vercel via enviromnent variables. This varaibles are not accesible on client's side and they are automatically inject during production.
+
+Mail are only work on the server side and insure client's ID security.
+
+Portfolio is deploy on Vercel and will get a update for each push. Serveless Function will automatically work on their own so no need to configure and enviroment variable are set up on my Vercel dashboard.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
