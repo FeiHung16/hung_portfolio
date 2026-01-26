@@ -46,6 +46,14 @@ export const Carroussel: React.FC = () => {
           <h2 className="text-softlinen">{project.title}</h2>
           <p className="text-softlinen">{project.description}</p>
         </div>
+        <div className="content__technologies">
+          <h2 className="text-softlinen">Technologies utilisées:</h2>
+          {project.technologies.map((tech, index) => (
+            <span key={index} className="tech text-softlinen">
+              {tech} {index < project.technologies.length - 1 && ', '}
+            </span>
+          ))}
+        </div>
       </div>
 
 
