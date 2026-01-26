@@ -54,9 +54,10 @@ export const Carroussel: React.FC = () => {
             </span>
           ))}
         </div>
+        <div className="githubButton">
+          <button><a href="https://github.com/FeiHung16" target="_blank" rel="noopener noreferrer">Voir mon GitHub</a></button>
+        </div>
       </div>
-
-
     </section>
   );
 };
